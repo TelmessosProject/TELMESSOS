@@ -5,11 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Helper\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
+    <ProjectReference Include="..\TELMESSOS.CORE\TELMESSOS.CORE.csproj" />
   </ItemGroup>
 
 </Project>
