@@ -10,5 +10,6 @@ namespace TELMESSOS.DATAACCESS.Abstract
 {
     public interface IBaseDal<TEntity> : IRepository<TEntity> where TEntity : CoreEntity
     {
+
     }
 }
