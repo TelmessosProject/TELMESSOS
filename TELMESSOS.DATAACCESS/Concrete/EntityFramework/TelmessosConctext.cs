@@ -9,5 +9,9 @@ namespace TELMESSOS.DATAACCESS.Concrete.EntityFramework
 {
     public class TelmessosConctext:DbContext
     {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+        }
     }
 }
