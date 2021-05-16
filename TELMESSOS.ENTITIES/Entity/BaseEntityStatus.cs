@@ -9,6 +9,6 @@ namespace TELMESSOS.ENTITIES.Entity
 {
     public class BaseEntityStatus:CoreEntity
     {
-        public bool Status { get; set; }
+        public bool Status { get; set; } = true;
     }
 }

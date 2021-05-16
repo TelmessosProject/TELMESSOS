@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp5</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TELMESSOS.BUSINESS\TELMESSOS.BUSINESS.csproj" />
+    <ProjectReference Include="..\TELMESSOS.CORE\TELMESSOS.CORE.csproj" />
+    <ProjectReference Include="..\TELMESSOS.DATAACCESS\TELMESSOS.DATAACCESS.csproj" />
+    <ProjectReference Include="..\TELMESSOS.ENTITIES\TELMESSOS.ENTITIES.csproj" />
+  </ItemGroup>
+
+</Project>

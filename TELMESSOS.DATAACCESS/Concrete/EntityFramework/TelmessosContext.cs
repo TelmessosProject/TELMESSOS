@@ -10,18 +10,20 @@ namespace TELMESSOS.DATAACCESS.Concrete.EntityFramework
 {
     public class TelmessosContext:DbContext
     {
-		//public TelmessosContext()
-		//{
-
-		//}
-		public DbSet<User> Users { get; set; }
+		
+		
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			//base.OnConfiguring(optionsBuilder);
-			optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=Telmessos;Integrated Security=True");
+			optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Telmessos;Integrated Security=True");
 		}
-	}
-    
 
-        
+		#region tables
+		public DbSet<User> Users { get; set; }
+		#endregion
+
+	}
+
+
+
 }

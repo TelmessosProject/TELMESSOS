@@ -16,7 +16,8 @@ namespace TELMESSOS.CORE.Concrete.EntityFramework
         {
             using (var context = new TContext())
             {
-                return context.Set<TEntity>().SingleOrDefault(filter);
+                return filter == null ? context.Set<TEntity>().FirstOrDefault()
+                                    : context.Set<TEntity>().FirstOrDefault(filter);
             }
         }
         
@@ -24,14 +25,16 @@ namespace TELMESSOS.CORE.Concrete.EntityFramework
         {
             using (var context = new TContext())
             {
-                return context.Set<TEntity>().Where(filter).ToList();
+                return filter==null? context.Set<TEntity>().ToList()
+                                    : context.Set<TEntity>().Where(filter).ToList();
             }
         }
         public IEnumerable<TEntity> Select(Expression<Func<TEntity, bool>> filter = null)
         {
             using (var context = new TContext())
             {
-                return context.Set<TEntity>().Where(filter).ToList();
+                return filter == null ? context.Set<TEntity>().ToList()
+                                    : context.Set<TEntity>().Where(filter).ToList();
             }
         }
 
