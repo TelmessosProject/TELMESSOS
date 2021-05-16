@@ -11,6 +11,8 @@ namespace TELMESSOS.CORE.Entities
     public class CoreEntity
     {
         [Column(Order = 0), Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+        //? burayı neden virtual yaptık?
         public virtual int Id { get; set; }
     }
 }

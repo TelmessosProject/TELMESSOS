@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -39,6 +39,7 @@ namespace TELMESSOS.CORE.Concrete.EntityFramework
         {
             using(var context=new TContext())
             {
+                //?buradaki TEntity kullanılmıyor mu?
                 context.Entry<TEntity>(entity).State=EntityState.Added;
                 context.SaveChanges();
             }

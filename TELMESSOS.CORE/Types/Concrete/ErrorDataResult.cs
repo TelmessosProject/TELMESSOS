@@ -13,7 +13,6 @@ namespace TELMESSOS.CORE.Types.Concrete
         {
 
         }
-
         public ErrorDataResult(TData data) : base(false, "", data)
         {
             

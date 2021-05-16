@@ -9,8 +9,9 @@ namespace TELMESSOS.CORE.Types.Concrete
 {
     public class SuccessResult : Result, ISuccessResult
     {
-        public SuccessResult():base(true,null)
+        public SuccessResult():base(true, null)
         {
+
         }
         public SuccessResult(string message):base(true,message)
         {

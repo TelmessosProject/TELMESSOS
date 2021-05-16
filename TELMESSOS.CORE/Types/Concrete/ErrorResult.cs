@@ -7,8 +7,12 @@ using TELMESSOS.CORE.Types.Abstract;
 
 namespace TELMESSOS.CORE.Types.Concrete
 {
-    public class ErrorResult:Result,IErrorResult
+    public class ErrorResult : Result, IErrorResult
     {
+        public ErrorResult() : base(false, null)
+        {
+
+        }
         public ErrorResult(string message):base(false,message)
         {
 

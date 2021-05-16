@@ -13,6 +13,10 @@ namespace TELMESSOS.CORE.Types.Concrete
         {
             Data = data;
         }
+        public DataResult(bool success, TData data) : base(success)
+        {
+            Data = data;
+        }
         public TData Data { get; set; }
     }
 }

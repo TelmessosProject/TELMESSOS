@@ -7,7 +7,10 @@ namespace TELMESSOS.ENTITIES.Entity
 {
     public class User: BaseEntityStatus,ILogEntity
     {
-        [StringLength(30), Required]
+        [Key]
+		public int UserId { get; set; }
+
+		[StringLength(30), Required]
         public string Username { get; set; }
 
         [StringLength(30), Required]
@@ -18,6 +21,8 @@ namespace TELMESSOS.ENTITIES.Entity
 
         [StringLength(50)]
         public string Lastname { get; set; }
+
+
         public int CreatedUserId { get; set; }
         public int UpdatededUserId { get; set; }
         public DateTime CreatedTime { get; set; }

@@ -14,6 +14,10 @@ namespace TELMESSOS.CORE.Types.Concrete
             Success = success;
             Message = message;
         }
+        public Result(bool success)
+        {
+            Success = success;
+        }
         public bool Success { get; set; }
         public string Message { get; set; }
 

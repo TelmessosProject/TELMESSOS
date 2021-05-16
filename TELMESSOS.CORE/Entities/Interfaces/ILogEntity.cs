@@ -8,6 +8,7 @@ namespace TELMESSOS.CORE.Entities.Interfaces
 {
     public interface ILogEntity
     {
+        //? bunu neden class olarak tanımlamadık? 
         int CreatedUserId { get; set; }
         int UpdatededUserId { get; set; }
         DateTime CreatedTime { get; set; }
