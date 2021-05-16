@@ -18,7 +18,7 @@ namespace TELMESSOS.DATAACCESS.Concrete.EntityFramework
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			//base.OnConfiguring(optionsBuilder);
-			optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Telmessos;Integrated Security=True");
+			optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=Telmessos;Integrated Security=True");
 		}
 	}
     

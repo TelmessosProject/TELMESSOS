@@ -7,9 +7,6 @@ namespace TELMESSOS.ENTITIES.Entity
 {
     public class User: BaseEntityStatus,ILogEntity
     {
-        [Key]
-		public int UserId { get; set; }
-
 		[StringLength(30), Required]
         public string Username { get; set; }
 
