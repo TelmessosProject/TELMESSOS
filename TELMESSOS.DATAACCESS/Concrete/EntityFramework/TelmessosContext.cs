@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TELMESSOS.CORE.Helper;
 using TELMESSOS.ENTITIES.Entity;
 
 namespace TELMESSOS.DATAACCESS.Concrete.EntityFramework
@@ -14,8 +15,10 @@ namespace TELMESSOS.DATAACCESS.Concrete.EntityFramework
 		
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			//base.OnConfiguring(optionsBuilder);
-			optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Telmessos;Integrated Security=True");
+			//optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Telmessos;Integrated Security=True");
+			optionsBuilder.UseSqlServer(ConnectionHelper.GetConnectionString("TelmessosConnection"));
+
+
 		}
 
 		#region tables

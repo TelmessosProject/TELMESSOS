@@ -26,6 +26,7 @@ namespace TestConsoleApp
 			idsList.Add(1);
 			idsList.Add(2);
 
+
 			IUserService userService = new UserManager(new EfUserDal { });
 			var result=userService.GetUsersByIds(idsList);
 			foreach (var data in result.Data)
